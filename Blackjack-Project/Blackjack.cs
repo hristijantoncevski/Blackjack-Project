@@ -104,8 +104,15 @@ namespace Blackjack_Project
             {
                 lblResult.Text = "The game is already started";
             }
+            else if(int.Parse(lblBalance.Text) < bet)
+            {
+                lblResult.Text = "You can't bet more than you have";
+
+            }
             else
             {
+                lblMinusBet.Enabled = false;
+                lblPlusBet.Enabled = false;
                 playercardSum = 0;
                 computercardSum = 0;
 
@@ -306,6 +313,9 @@ namespace Blackjack_Project
             used.Clear();
             cardUsed.Clear();
             lblResult.Text = "Player choice";
+
+            lblMinusBet.Enabled = true;
+            lblPlusBet.Enabled = true;
         }
 
         public void fullReset()
@@ -381,6 +391,28 @@ namespace Blackjack_Project
         {
             picturebox.ImageLocation = "backOfCard.png";
             picturebox.SizeMode = PictureBoxSizeMode.AutoSize;
+        }
+        
+        private void lblPlusBet_Click(object sender, EventArgs e)
+        {
+            bet += 100;
+            lblBet.Text = "" + bet;
+            if (bet > int.Parse(lblBalance.Text))
+            {
+                bet = int.Parse(lblBalance.Text);
+                lblBet.Text = "" + bet;
+            }
+        }
+
+        private void lblMinusBet_Click(object sender, EventArgs e)
+        {
+            bet -= 100;
+            lblBet.Text = "" + bet;
+            if(int.Parse(lblBet.Text) < 0)
+            {
+                bet = 0;
+                lblBet.Text = "0"; 
+            }
         }
     }
 }
