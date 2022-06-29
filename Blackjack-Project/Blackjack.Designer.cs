@@ -49,6 +49,7 @@
             this.lblBet = new System.Windows.Forms.Label();
             this.lblPlusBet = new System.Windows.Forms.Label();
             this.lblMinusBet = new System.Windows.Forms.Label();
+            this.lblMax = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbFirstCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSecondCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbComputerFirstCard)).BeginInit();
@@ -186,7 +187,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(595, 553);
+            this.label4.Location = new System.Drawing.Point(566, 553);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 25);
             this.label4.TabIndex = 14;
@@ -196,7 +197,7 @@
             // 
             this.lblBalance.AutoSize = true;
             this.lblBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBalance.Location = new System.Drawing.Point(690, 553);
+            this.lblBalance.Location = new System.Drawing.Point(661, 553);
             this.lblBalance.Name = "lblBalance";
             this.lblBalance.Size = new System.Drawing.Size(23, 25);
             this.lblBalance.TabIndex = 15;
@@ -218,7 +219,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(816, 553);
+            this.label6.Location = new System.Drawing.Point(752, 553);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 25);
             this.label6.TabIndex = 17;
@@ -228,7 +229,7 @@
             // 
             this.lblBet.AutoSize = true;
             this.lblBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBet.Location = new System.Drawing.Point(869, 553);
+            this.lblBet.Location = new System.Drawing.Point(805, 553);
             this.lblBet.Name = "lblBet";
             this.lblBet.Size = new System.Drawing.Size(45, 25);
             this.lblBet.TabIndex = 18;
@@ -238,7 +239,7 @@
             // 
             this.lblPlusBet.AutoSize = true;
             this.lblPlusBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlusBet.Location = new System.Drawing.Point(943, 553);
+            this.lblPlusBet.Location = new System.Drawing.Point(911, 553);
             this.lblPlusBet.Name = "lblPlusBet";
             this.lblPlusBet.Size = new System.Drawing.Size(24, 25);
             this.lblPlusBet.TabIndex = 19;
@@ -249,12 +250,23 @@
             // 
             this.lblMinusBet.AutoSize = true;
             this.lblMinusBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMinusBet.Location = new System.Drawing.Point(973, 553);
+            this.lblMinusBet.Location = new System.Drawing.Point(941, 553);
             this.lblMinusBet.Name = "lblMinusBet";
             this.lblMinusBet.Size = new System.Drawing.Size(19, 25);
             this.lblMinusBet.TabIndex = 20;
             this.lblMinusBet.Text = "-";
             this.lblMinusBet.Click += new System.EventHandler(this.lblMinusBet_Click);
+            // 
+            // lblMax
+            // 
+            this.lblMax.AutoSize = true;
+            this.lblMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMax.Location = new System.Drawing.Point(966, 553);
+            this.lblMax.Name = "lblMax";
+            this.lblMax.Size = new System.Drawing.Size(50, 25);
+            this.lblMax.TabIndex = 21;
+            this.lblMax.Text = "Max";
+            this.lblMax.Click += new System.EventHandler(this.lblMax_Click);
             // 
             // Blackjack
             // 
@@ -263,6 +275,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1028, 587);
+            this.Controls.Add(this.lblMax);
             this.Controls.Add(this.lblMinusBet);
             this.Controls.Add(this.lblPlusBet);
             this.Controls.Add(this.lblBet);
@@ -318,6 +331,7 @@
         private System.Windows.Forms.Label lblBet;
         private System.Windows.Forms.Label lblPlusBet;
         private System.Windows.Forms.Label lblMinusBet;
+        private System.Windows.Forms.Label lblMax;
     }
 }
 

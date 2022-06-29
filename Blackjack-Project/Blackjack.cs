@@ -113,6 +113,7 @@ namespace Blackjack_Project
             {
                 lblMinusBet.Enabled = false;
                 lblPlusBet.Enabled = false;
+                lblMax.Enabled = false;
                 playercardSum = 0;
                 computercardSum = 0;
 
@@ -316,6 +317,7 @@ namespace Blackjack_Project
 
             lblMinusBet.Enabled = true;
             lblPlusBet.Enabled = true;
+            lblMax.Enabled = true;
         }
 
         public void fullReset()
@@ -413,6 +415,12 @@ namespace Blackjack_Project
                 bet = 0;
                 lblBet.Text = "0"; 
             }
+        }
+
+        private void lblMax_Click(object sender, EventArgs e)
+        {
+            bet = int.Parse(lblBalance.Text);
+            lblBet.Text = "" + bet;
         }
     }
 }
