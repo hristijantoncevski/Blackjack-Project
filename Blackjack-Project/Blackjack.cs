@@ -90,7 +90,7 @@ namespace Blackjack_Project
         public Blackjack()
         {
             InitializeComponent();
-            //test
+            //test1
         }
 
         private void Form1_Load(object sender, EventArgs e)
