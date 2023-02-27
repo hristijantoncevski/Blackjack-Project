@@ -90,7 +90,6 @@ namespace Blackjack_Project
         public Blackjack()
         {
             InitializeComponent();
-            DoubleBuffered = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -327,7 +326,7 @@ namespace Blackjack_Project
             lblBalance.Text = "1000";
         }
 
-        public int selectCard()
+        public int selectCard() 
         {
             int card;
             do
