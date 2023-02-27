@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Blackjack_Project
-{
+{ 
     public partial class Blackjack : Form
     {
         List<Card> PlayerCards = new List<Card>()
@@ -90,6 +90,7 @@ namespace Blackjack_Project
         public Blackjack()
         {
             InitializeComponent();
+            //test
         }
 
         private void Form1_Load(object sender, EventArgs e)
